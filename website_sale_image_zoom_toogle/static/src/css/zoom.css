@@ -1,0 +1,50 @@
+
+/* styles unrelated to zoom */
+* { border:0; margin:0; padding:0; }
+
+/* these styles are for the demo, but are not required for the plugin */
+.zoom {
+    display:inline-block;
+    position: relative;
+}
+
+/* magnifying glass icon */
+.zoom:after {
+    content:'';
+    display:block; 
+    width:33px; 
+    height:33px; 
+    position:absolute; 
+    top:0;
+    right:0;
+    background:url(../img/icon.png);
+}
+
+.zoom img {
+    display: block;
+    background: #fff;
+}
+.zoom img::selection { background-color: transparent; }
+
+#ex2 img:hover { cursor: url(../img/grab.cur), default; }
+#ex2 img:active { cursor: url(../img/grabbed.cur), default; }
+
+
+.slider-image {
+    max-height: 100px;
+}
+
+.slider-main-image {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-height: 500px;
+}
+
+.slick-slider .slick-list{
+    padding: 0 !important;
+}
+
+.slick-prev:before, .slick-next:before{
+    color: #000000;
+}

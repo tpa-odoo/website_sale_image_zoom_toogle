@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="assets_frontend" inherit_id="website.assets_frontend" name="Image zoom on click" customize_show="False">
+            <xpath expr="." position="inside">
+                <!-- For zoom -->
+                <script type="text/javascript" src="/website_sale_image_zoom_toogle/static/src/js/jquery.zoom.js"></script>
+                <script type="text/javascript" src="/website_sale_image_zoom_toogle/static/src/js/website_product_zoom.js"></script>
+                <link rel='stylesheet' href='/website_sale_image_zoom_toogle/static/src/css/zoom.css'></link>
+            </xpath>
+        </template>
+
+        <!-- Apply changes in product template -->
+
+        <template id="product" inherit_id="website_sale.product" name="Image of Product">
+            <xpath expr="//span[@t-field='product.image']" position="replace">
+                <span itemprop="image" class="zoom image_zoom" t-field="product.image" t-field-options='{"widget": "image", "class": "zoom image_zoom product_detail_img", "alt-field": "name"}'/>
+            </xpath>
+        </template>
+
+
+    </data>
+</openerp>
+
